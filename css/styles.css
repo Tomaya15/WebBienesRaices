@@ -1,0 +1,493 @@
+/* ** GLOBAL ** */
+html { 
+    box-sizing: border-box; /* * { Box-sizing: Border-box } FTW BOX SIZING DE PAUL IRISH */
+    font-size: 62.5%;/* RESET para rems, se cambia el valor a 10px */
+}
+
+  *, *:before, *:after {   /* * { Box-sizing: Border-box } FTW  BOX SIZING DE PAUL IRISH*/
+    box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;  /* Para que las imagenes se ajusten a su perspectivo contenedor*/
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+}
+
+h1{
+    font-size: 3.4rem;
+}
+
+h2{
+    font-size: 2.8rem ;
+}
+
+h3{
+    font-size: 2.4rem ;
+}
+
+h4{
+    font-size: 2rem ;
+}
+.d-block{
+    display: block;
+}
+.centrar-texto{
+    text-align: center;
+    text-transform: capitalize;
+}
+.fw-700{
+    font-weight: 700;
+}
+
+.boton{  /* boton  */
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    display: inline-block; /* Para modificiar un href o una img se tiene que pasar el display a inline-block para que no tome todo el ancho */
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+/* ** HEADER ** */
+
+.header-site{ /* Site del contactanos */
+    background: #333333;
+    padding: 1 0 3rem 0 ;
+    margin-bottom: 4rem;
+}
+
+.header-site.inicio{
+    background-image: url(../img/header.jpg);
+    /* Tamaño */
+    height: 100vh; /*view-height*/
+    min-height: 60rem; /*Si el usuario tiene una pantalla demasiada chica, este va a medir minimo 600 px*/
+    /* Posicionamiento */
+    background-position: center center ;
+    background-size: cover; /* Cover fuerza que tome todo el espacio disponible tanto en altura como en ancho */
+}
+
+.contenedor-barra{ 
+    padding-top: 3rem;
+}
+@media (min-width: 768px) {
+    .contenedor-barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contenido-header{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}   
+@media (min-width: 768) {
+    .contenido-header{
+        text-align: left;
+    }
+}
+.contenido-header h1{
+    font-family: 'Bebas Neue', cursive;
+    color: wheat;
+    padding-bottom: 2rem;
+    max-width: 45rem; /* el maximo de espacio que tiene el texto horizontal*/
+    line-height: 5rem;
+}
+
+
+/* NAVEGACION */
+
+.navegacion a { /* a es para selecionnar a los hijos de navegacion es decir cada href */
+    color: white;
+    text-decoration: none; /* para sacarle el underline */
+    font-size: 1.7rem; /* 18 px */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .navegacion a{
+        display: inline-block;
+        margin-right: 2rem; /* separacion entre los href */
+    }
+    .navegacion a:last-of-type{ /* pseudo selector */
+        margin-right: 0rem; /* Para sacarle el margen de la derecha al ultimo href */
+    }
+}
+
+.navegacion a:hover{ /* Si le doy hover a cualquier href este se pintara de dorado */
+    color: gold;
+}
+
+.navegacion :last-of-type{
+    margin-bottom: 0;
+}
+
+
+
+/* Secciones y contenedores */
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    width: 95%;
+}    
+
+.contenedor h2{
+    font-size: 2.5;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+}
+
+.seccion{
+    padding-top: 3.5rem;
+    padding-bottom: 2rem; 
+}
+
+/* Sobre nosotros */
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+        line-height: 3rem;
+    }
+}
+
+.icono{
+    text-align: center;
+    
+}
+@media (min-width: 768px) {
+    .icono{
+        flex-basis: calc(33.3% - 1rem); /* para que midan todos lo mismo */
+        text-align: center;
+    }
+}
+.icono h3{
+    text-transform: uppercase;
+    font-weight: 750;
+    margin-bottom: 2.5rem;
+}
+
+/* Anuncios */
+
+@media (min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex; 
+        justify-content: space-between; /* space between anuncio y anuncio*/
+        flex-wrap: wrap;
+    }    
+}
+
+.anuncio{
+    border-style: solid;
+    border-color: #B5B5B5;
+    background-color: #F5F5F5 ;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-bottom: 3rem;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .anuncio{
+        flex-basis: calc(33.3% - 1rem); 
+    }
+}
+
+.anuncio-contenido{
+    padding: 4rem;
+    line-height: 3rem;
+    position: relative;
+}
+
+
+.anuncio-contenido h3, p{
+    margin: 0%;
+}
+
+.anuncio-contenido h3{
+    margin-bottom: 2.5rem;
+    
+}
+.anuncio-precio{
+    color: #71b100;
+    font-weight: 700;
+}
+
+.anuncio-boton{
+    background-color: #e08709;
+    display: block;
+    margin-bottom: 3.5rem;
+}
+
+.anuncios-boton{
+    background-color: #71b100;
+    padding: 1.3rem 2.5rem;
+    
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+
+.anuncio-iconos{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 50rem;
+    flex: 1;
+}
+
+.anuncio-iconos li{
+    display: flex;
+}
+
+.anuncios-iconos li, img{
+    margin-right: 2.5rem;
+    
+}
+
+
+/* Contacto home */
+
+.contacto-imagen{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.contacto-contenido{
+    flex: 0 0 95%;
+    color: white;
+}
+.contacto-contenido h2{
+    text-align: start;
+    margin-bottom: 4rem;
+    
+}
+
+.contacto-contenido p {
+    font-size: 1.8rem ;
+}
+
+.contacto-boton{
+    display: inline-block;
+    background-color: #e08709;
+}
+
+/* Seccion inferior BLOG */
+@media (min-width: 768px) {
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog{
+        flex-basis: 60%; /* EL BLOG TOMA 60% Y LOS TESTIMONIOS 40%*/
+    
+    }
+    .seccion-inferior .testimoniales{
+        flex-basis: calc(40% - 2rem); 
+    }
+}
+
+.blog-article{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+.blog-article:last-of-type{
+    margin-bottom: 0rem;
+}
+.blog-articles{
+    padding-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .blog-imagen{
+        flex-basis: 40%;
+    }
+    .blog-articletext{
+        flex-basis: calc(60% - 3rem);
+    }
+}
+.blog-articletext p{
+    margin-top: -2rem;
+}
+.blog-articletext :last-of-type{
+    margin-top: 1.5rem;
+}
+.blog-articletext h4{
+    margin: 0;
+    line-height: 2.8rem;
+    padding-bottom: 5rem;
+}
+.blog-articletext a{
+    color: black ;
+    text-decoration: none;
+}
+.blog-articletext h4::after{ /* Pseudoelement no se pueden seleccionar  */ 
+    content: '';
+    display: block;
+    width: 10rem;
+    height: .6rem;
+    background-color: #71b100;
+    margin-top: 0.5rem;
+}
+.blog-articletext span{
+    color: #e08709;
+    font-weight: 600;
+}
+
+
+/* Seccion inferior TESTIMONIOS */
+
+.testimoniales{
+    position:relative
+}
+.testimoniales-testimonio{
+    background-color: #71b100;
+    padding: 4rem;
+    color: white;
+    display: block;
+    height: 40rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 13rem ;
+    line-height: 4rem;
+    margin-top: 5rem;
+}
+
+.testimoniales-testimonio blockquote{
+    font-size: 2rem;
+    position: relative;
+    padding-left: 3.5rem;
+}
+.testimoniales-testimonio blockquote::before{
+    content: ''; /* Hay q poner content si o si */
+    background-image: url(../img/comilla.svg);
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    position: absolute; /* el padre debe tener position relative! importante */
+    left: -2.5rem;
+}
+.testimoniales-testimonio p{
+    margin-top: 5rem;
+    text-align: end;  
+    font-size: 2.4rem;  
+}
+
+/* footer */
+
+.site-footer{
+    background-color: #333333;
+    margin-top: 5rem;
+    padding-top: -;
+}
+.contenedor-footer{
+    padding: 0 0;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between;  
+    }
+}
+.final{
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    padding-top: -1rem;
+}
+
+.final a::after{
+    content: '';
+    display: block;
+    background-color: #e08709;
+    width: 7rem;
+    height: .2rem;
+}
+
+.copyright{
+    display: flex;
+    margin: 0;
+    color: white;
+    align-self: center;
+}
+
+/* PAGINAS INTERNAS */
+
+    /* Nosotros */
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 50% 50% ; /*  50% a cada columna  */
+    grid-column-gap: 3rem;
+    margin-top: 5rem;
+}
+
+.nosotros-texto blockquote{
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem     0rem;
+}
+
+    /* Anuncio */
+
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+
+}    
+.contenido-centrado{
+    max-width: 80rem;   imp !important
+}
+
+.anuncio-descripcion{
+    height: 10rem;
+}
+
+/* Contacto */
+
+label{
+    display: block;
+    margin-top: 2rem;
+}
+select{
+    width: 13.5rem;
+}
+.boton-form{
+    margin-top: 2.3rem;
+}
+fieldset{
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>  
+
+    <header class="header-site ">
+        <div class="contenedor contenido-header"> <!-- Todo lo que va adentro del background image del css necesito centrarlo y a la barra nav posicionarla -->
+            <div class="contenedor-barra">
+                <a href="/">
+                    <div class="logo">
+                        <img class="logo-imagen" src="img/logo.svg" alt="Logotipo de bienes raices">
+                    </div>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+            
+        </div> 
+    </header>
+
+    <h1 class="fw-700 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="imagen-principal">
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class= "fw-700 centrar-texto">llena el formulario de contacto</h2>
+        <form action="">
+            <fieldset>
+                <legend>Informacion Personal</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="" required>
+
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" cols="80" rows="15"></textarea>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacion sobre Propiedad</legend>
+
+                <label for="options">Vende o Compra</label>
+                <select id="options">
+                    <option value="" disabled selected>--Seleccione--</option>
+                    <option value="">Compra</option>
+                    <option value="">Vende</option>
+                </select>
+
+                <label for="cantidad">Presupuesto:</label>
+                <input type="number" placeholder="0" min="0">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p>Como desea ser contactado:</p>
+
+                <label for="telefono">Telefono</label>
+                <input type="radio" name="contacto" value="telefono"id="telefono">
+
+                <label for="e-mail">E-mail</label>
+                <input type="radio" name="contacto" value="correo"id="e-mail">
+
+                <p>Si eligio telefono eliga la fecha y hora</p>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" min="09:00" max="18:00">
+            </fieldset>
+            
+            <input type="button" value="Enviar Formulario" class="boton-form boton anuncios-boton">
+        
+        </form>
+
+
+    </main>
+        
+            
+
+    <footer class="site-footer">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion final">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservadores &copy;</p>
+        </div>
+    </footer>
